@@ -1,0 +1,5 @@
+body {
+    border: 20px solid green; /* Change the border width and color */
+    margin: 0; /* Removes default margin to ensure the border touches the edges */
+    padding: 20px; /* Optional: adds padding inside the border */
+}
