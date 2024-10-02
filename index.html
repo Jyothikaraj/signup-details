@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            border: 2px solid green;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 128, 0, 0.3);
+            background-color: #f9f9f9;
+        }
+
+        h4 {
+            text-align: center;
+        }
+
+        input[type="text"], input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid green;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: green;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: darkgreen;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 600px) {
+            form {
+                width: 90%;
+                padding: 10px;
+            }
+
+            input[type="submit"] {
+                padding: 8px;
+            }
+        }
+    </style>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="sample login styles.css"> <!-- Adjust the path if needed -->
+
+</head>
+<body>
+    <div>
+        <h4> WELCOME TO SUBWAY </h4>
+        <form id="login-page" method="post" action="https://script.google.com/macros/s/AKfycbxsohrfB7XKyGKe-oQTbfRUQoWeqzGfNPVxKgLYWPy-P4E1CC7xLiuotzhnTbaFa1rx/exec" >
+            <p>User Name:
+            <input type="text" id="name" name="username" required/>    
+            </p>
+            <p>Phone Number:
+            <input type="tel" name="phoneNumber" required pattern="[0-9]{10}" />
+            </p>
+            <input type="submit" name="submit" value="Submit" />
+        </form>
+    </div>
+    <div id="success-message" style="display: none;">Data saved successfully!</div> <!-- Add a success message element -->
+    <script src="login-script.js"></script> 
+</body>
+</html>
